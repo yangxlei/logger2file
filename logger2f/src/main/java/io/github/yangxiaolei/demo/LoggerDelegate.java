@@ -13,6 +13,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void verbose(String text) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.verbose(text);
         }
@@ -20,6 +21,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void info(String text) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.info(text);
         }
@@ -27,6 +29,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void warn(String text) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.warn(text);
         }
@@ -34,6 +37,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void debug(String text) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.debug(text);
         }
@@ -41,6 +45,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void error(String text) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.error(text);
         }
@@ -48,6 +53,7 @@ class LoggerDelegate implements Logger {
 
     @Override
     public void error(String text, Throwable throwable) {
+        if (mLoggers == null) return;
         for (Logger logger : mLoggers) {
             logger.error(text, throwable);
         }

@@ -13,6 +13,6 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        LoggerFactory.init(this, true);
+        LoggerFactory.init(this, true, true);
     }
 }
